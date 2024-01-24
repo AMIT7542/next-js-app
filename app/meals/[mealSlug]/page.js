@@ -3,9 +3,13 @@ import React from 'react'
 import classes from './page.module.css'
 import Image from 'next/image'
 import { getMeal } from '@/lib/meals'
+import { notFound } from 'next/navigation'
 const MealDetailPage = ({ params }) => {
     const data = getMeal(params.mealSlug)
     console.log(data)
+    if (!data) {
+        notFound();
+    }
     const { image, id, slug, title, summary, instructions, creator, creator_email } = data
     return (
         <>
