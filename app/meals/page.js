@@ -27,7 +27,7 @@ const MealPage = async () => {
                     Choose ur favorite recipe and cook it
                 </p>
                 <p className={classes.cta}>
-                    <Link href="/meals/share">
+                    <Link href="/meals/shared">
                         Share Your Favorite Recipe
                     </Link>
 
